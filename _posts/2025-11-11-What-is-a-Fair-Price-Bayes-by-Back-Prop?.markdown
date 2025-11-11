@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "What is a 'Fair Price' (Bayes by Back Prop)"
+title:  "What is a 'Fair Price' (Bayes by Back Prop)?"
 date:   2025-11-11 12:03:37 -0500
 categories: jekyll update
 ---
