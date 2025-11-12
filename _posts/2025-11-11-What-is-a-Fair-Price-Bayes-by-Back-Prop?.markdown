@@ -4,7 +4,12 @@ title:  "What is a 'Fair Price' (Bayes by Back Prop)?"
 date:   2025-11-11 12:03:37 -0500
 categories: jekyll update
 ---
+In the world of A.I. fueled growth, stocks are expensive. Various measures such as price-to-earnings ratio, price-to-book ratio, and the Cyclically adjusted price-to-earnings ratio (CAPE) are all approaching Dot-com levels of the late 90's. Examples of high price-to-earnings and price-to-book ratios for the total US stock market can be seen in the `Portfolio Composition` tab found on Vanguard and shown below. Despite these high valuations, the talking heads claim that high prices are justified by higher expected growth of high quality companies, and `this time is is different`. Is it really? Are they right? Or otherwise are stocks over-priced and are we in for another lost decade (e.g. 2000 - 2010)?
+
+
 ![Portfolio Composition]({{ site.url }}/Figures/BayesByBackProp/PortfolioComposition.png)
+
+In the interest of this blog, the aim is to use the `Portfolio Composition` data (as shown above) in conjunction with various rates and macroeconomic variables to answer this exact question. More concisely, I would like to estimate a probability distribution for a `Fair Value` for `P/B ratio` given the variables listed below. I have excluded variables that depend on price of stocks such as dividend yield and price to earnings ratio since these would create a data leak with the `target` variable. In addition, I have log scaled `Return on Equity` and abbreviated earnings growth to  `EG5.' 
 
 {% highlight ruby %}
 Features = ['Log RoE', 'Daily Fed Funds', '1 - year treasury',
