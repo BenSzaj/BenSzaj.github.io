@@ -9,7 +9,7 @@ In the world of A.I. fueled growth, stocks are expensive. Various measures such 
 
 ![Portfolio Composition]({{ site.url }}/Figures/BayesByBackProp/PortfolioComposition.png)
 
-In the interest of this blog, the aim is to use the `Portfolio Composition` data (as shown above) in conjunction with various rates and macroeconomic variables to answer this exact question. More concisely, I would like to estimate a probability distribution for a `Fair Value` for `P/B ratio` given the variables listed below. I have excluded variables that depend on price of stocks such as dividend yield and price to earnings ratio since these would create a data leak with the `target` variable. In addition, I have log scaled `Return on Equity`, and `P/B ratio` and additionally abbreviated earnings growth to `EG5.' 
+In the interest of this blog, the aim is to use the `Portfolio Composition` data (as shown above) in conjunction with various rates and macroeconomic variables to answer this exact question. More concisely, I would like to estimate a probability distribution for a `Fair Value` for the `P/B ratio` given the 62 variables listed below. I have excluded variables that depend on price of stocks such as dividend yield and price to earnings ratio since these would create a data leak with the `target` variable. In addition, I have log scaled `Return on Equity`, and `P/B ratio` and additionally abbreviated earnings growth to `EG5.' 
 
 {% highlight ruby %}
 Features = ['Log RoE', 'Daily Fed Funds', '1 - year treasury',
@@ -42,10 +42,8 @@ Features = ['Log RoE', 'Daily Fed Funds', '1 - year treasury',
             'Annualized Hourly Earnings', 'EG5']
 {% endhighlight %}
 
-{% highlight ruby %}
-Target = ['Log P/B']
-{% endhighlight %}
-
+In total,
+ 
 ![Histogram Of Data]({{ site.url }}/Figures/BayesByBackProp/HistogramOfData.png)
 
 ![Feature Importance]({{ site.url }}/Figures/BayesByBackProp/FeatureImportance.png)
