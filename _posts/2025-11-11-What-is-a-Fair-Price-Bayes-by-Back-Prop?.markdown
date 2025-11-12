@@ -4,7 +4,18 @@ title:  "What is a 'Fair Price' (Bayes by Back Prop)?"
 date:   2025-11-11 12:03:37 -0500
 categories: jekyll update
 ---
+
+{% highlight ruby %}
+Features = ['Log RoE', 'Daily Fed Funds', '1 - year treasury', '2 - year treasury', '3 - year treasury', '5 - year treasury', '7 - year treasury', '10 - year treasury',  '20 - year treasury', '30 - year treasury', '30 - year mortgage', '15 - year mortgage', 'Junk - Treasury Spread','AAA Corporate Index', 'BBB Corporate Index',  'CCC Corporate Index','5 - year TIPS', '7 - year TIPS', '10 - year TIPS', '20 - year TIPS','30 - year TIPS', 'Emerging Markets Corporate Index', 'Emerging Markets Junk Index', 'Asia Emerging Markets Corporate Index', 'Car Loan Index', '1 - year corporate', '3 - year corporate', '5 - year corporate',  '7 - year corporate', '10 - year corporate', '15 - year corporate', 'Personal Loan Index', 'Delinquency Rates: All Loans', 'Delinquency Rates: Consumer Loans', 'Delinquency Rates: Loans Secured by Real Estate', 'Delinquency Rates: Commerical Real Estate', 'Delinquency Rates: Credit Card Loans', 'Delinquency Rates: Residential Mortgages', 'Delinquency Rates: Lease Financing Receivables', 'Delinqueny Rates: Business Loans', '1 - Year Expected Inflation', '2 - Year Expected Inflation', '3 - Year Expected Inflation', '5 - Year Expected Inflation', '1 - Year Real Interest Rate', '1 - Month Real Interest Rate',  'Federal Debt to GDP', 'Federal Deficit to GDP', 'Population Growth', 'Real GDP Rate', 'Unemployment Rate',  'UMich Inflation Expectation', 'Personal Savings Rate', 'Annualized CPI', 'Annualized PCE', 'Annualized Core PCE', 'Annualized M1 Money Supply', 'Annualized M2 Money Supply', 'Annualized M3 Money Supply', 'Annualized Hourly Earnings', 'EG5']
+{% endhighlight %)
+
+{% highlight ruby %}
+Target = ['Log P/B']
+{% endhighlight %)
 <object data="{{ site.url }}/Figures/BayesByBackProp/HistogramOfData.pdf" width="1000" height="1000" type="application/pdf"></object>
+
+<object data="{{ site.url }}/Figures/BayesByBackProp/FeatureImportance.pdf" width="1000" height="1000" type="application/pdf"></object>
+
 
 [comment]: # {{ site.baseurl }}
 [comment]: # <embed src="main/Figures/BayesByBackProp/HistogramOfData.pdf" type="application/pdf">
