@@ -4,8 +4,9 @@ title:  "What is a 'Fair Price' (Bayes by Back Prop)?"
 date:   2025-11-11 12:03:37 -0500
 categories: jekyll update
 ---
-<object data="Figures/BayesByBackProp/HistogramOfData.pdf" width="1000" height="1000" type="application/pdf"></object>
+<object data="{{ site.url }}/Figures/BayesByBackProp/HistogramOfData.pdf" width="1000" height="1000" type="application/pdf"></object>
 
+[comment]: # {{ site.baseurl }}
 [comment]: # <embed src="main/Figures/BayesByBackProp/HistogramOfData.pdf" type="application/pdf">
 
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
