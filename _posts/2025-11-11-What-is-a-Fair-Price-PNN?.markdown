@@ -44,7 +44,7 @@ Features = ['Log RoE', 'Daily Fed Funds', '1 - year treasury',
 
 Where available, I have tabulated the above data collected on a daily basis for ~100 ETF index funds representing most of the Vanguard passive lineup. In total, there are 71395 observations each with 62 features. The temporal distribution of the data is shown below. I partition pre-2025 data into `Training` shown in blue and post-2025 data into `Testing` shown in red, corresponding to a ~71/29 split. Additionally, all data is standard scaled to a zero-mean and unit standard deviation, i.e.
 
-$ Z = \frac{X-\mu}{\sigma}$
+$$\begin{equation} Z = \frac{X-\mu}{\sigma}\end{equation}$$
  
 ![Histogram Of Data]({{ site.url }}/Figures/BayesByBackProp/HistogramOfData.png)
 
