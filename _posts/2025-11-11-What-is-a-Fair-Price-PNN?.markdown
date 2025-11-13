@@ -4,7 +4,7 @@ title:  "What is a 'Fair Price' (Part I. Probabilistic Neural Network)?"
 date:   2025-11-11 12:03:37 -0500
 categories: [Probabilistic Neural Network]
 ---
-In the world of A.I. fueled growth, stocks are expensive. Various measures such as price-to-earnings ratio, price-to-book ratio, and the Cyclically adjusted price-to-earnings ratio (CAPE) are all approaching Dot-com levels of the late 90's. Examples of high price-to-earnings and price-to-book ratios for the total US stock market can be seen in the `Portfolio Composition` tab found on Vanguard and shown below. Despite these high valuations, the talking heads claim that high prices are justified by higher expected growth of high quality companies, and `this time is is different`. Is it really? Are they right? Or otherwise are stocks over-priced and are we in for another lost decade (e.g. 2000 - 2010)?
+In the world of A.I. fueled growth, stocks are expensive. Various measures such as price-to-earnings ratio, price-to-book ratio, and the Cyclically adjusted price-to-earnings ratio (CAPE) are all approaching Dot-com levels of the late 90's. Examples of high price-to-earnings and price-to-book ratios for the total US stock market can be seen in the `Portfolio Composition` tab found on Vanguard and shown below. Despite these high valuations, the stock bulls claim that high prices are justified by higher expected growth of high quality companies, and **this time is is different**. Is it really? Are they right? Or otherwise are stocks over-priced and are we in for another lost decade (e.g. 2000 - 2010)?
 
 
 ![Portfolio Composition]({{ site.url }}/Figures/BayesByBackProp/PortfolioComposition.png)
@@ -44,7 +44,7 @@ Features = ['Log RoE', 'Daily Fed Funds', '1 - year treasury',
 
 Where available, I have tabulated the above data collected on a daily basis for ~100 ETF index funds representing most of the Vanguard passive lineup. In total, there are 71395 observations each with 62 features. The temporal distribution of the data is shown below. I partition pre-2025 data into `Training` shown in blue and post-2025 data into `Testing` shown in red, corresponding to a ~71/29 split. Additionally, all data is standard scaled to a zero-mean and unit standard deviation, i.e.
 
-$$\begin{equation} Z = \frac{X-\mu}{\sigma}\end{equation}$$
+$$Z = \frac{X-\mu}{\sigma}$$
  
 ![Histogram Of Data]({{ site.url }}/Figures/BayesByBackProp/HistogramOfData.png)
 
