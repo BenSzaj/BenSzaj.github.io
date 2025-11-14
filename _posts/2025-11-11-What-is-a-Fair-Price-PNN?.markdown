@@ -50,6 +50,16 @@ $$Z = \frac{X-\mu}{\sigma}$$
 
 ![Feature Importance]({{ site.url }}/Figures/BayesByBackProp/FeatureImportance.png)
 
+![Loss Curves]({{ site.url }}/Figures/BayesByBackProp/LossCurvesExample.png)
+
+![Parity Plot]({{ site.url }}/Figures/BayesByBackProp/ParityPlot.png)
+
+![Predictions Data]({{ site.url }}/Figures/BayesByBackProp/Predictions_Data.png)
+
+![Predictions Results Vanguard]({{ site.url }}/Figures/BayesByBackProp/Predictions_Results_Vanguard.png)
+
+![Predictions BarChart Vanguard]({{ site.url }}/Figures/BayesByBackProp/Predictions_BarChart_Vanguard.png)
+
 
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
