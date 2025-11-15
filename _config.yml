@@ -35,6 +35,12 @@ plugins:
   - jekyll-feed
 
 markdown: kramdown
+kramdown:
+  input: GFM # Optional: Use GitHub Flavored Markdown within Kramdown
+  hard_wrap: false # Optional: Set to true if you want hard line breaks
+  syntax_highlighter: rouge # Or 'highlighter_opts' for more specific options
+  syntax_highlighter_opts:
+      css_class: 'highlight' # Example option for syntax highlighting
 
 # Exclude from processing.
 # The following items will not be processed, by default.
