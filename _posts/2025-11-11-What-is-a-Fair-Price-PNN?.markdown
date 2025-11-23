@@ -60,7 +60,11 @@ Where available, I have tabulated the above data collected on a daily basis for 
 
 ![Predictions Results Vanguard]({{ site.url }}/Figures/BayesByBackProp/Predictions_Results_Vanguard.png)
 
+As an alternative, the estimations shown in the above plot can be quantified in the form of a bar chart. In the chart below, I quantify today's price relative to the estimated fair-value distribution in units of standard deviation above the mean for each fund shown (ticker in parenthesis). As an example, `Large Growth` is `2.2` standard deviations above the mean for the given Return on Equity. This is expensive, and indicates that for the given Return on Equity `Large Growth` has a lower Price-to-Book ratio roughly 97.5% of the time. Alternatively, `Small Value` is only `0.3` standard deviations above the mean. This is about fairly priced for the given Return on Equity. 
+
 ![Predictions BarChart Vanguard]({{ site.url }}/Figures/BayesByBackProp/Predictions_BarChart_Vanguard.png)
+
+Concusions:
 
 
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
