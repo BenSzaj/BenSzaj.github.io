@@ -58,6 +58,8 @@ Where available, I have tabulated the above data collected on a daily basis for 
 
 ![Predictions Data]({{ site.url }}/Figures/BayesByBackProp/Predictions_Data.png)
 
+Given the above analysis, where does this leave us at the time of this writing? Below I show the same standard scaled Return on Equity versus Price-to-Book, however, only showing data obtained from the [Vanguard][Vanguard] `Portfolio Composition` as of this writing as well as the distribution of predicted Price-to-Book as a function of Return on Equity.
+
 ![Predictions Results Vanguard]({{ site.url }}/Figures/BayesByBackProp/Predictions_Results_Vanguard.png)
 
 As an alternative, the estimations shown in the above plot can be quantified in the form of a bar chart. In the chart below, I quantify today's price relative to the estimated fair-value distribution in units of standard deviation above the mean for each fund shown (ticker in parenthesis). As an example, `Large Growth` is `2.2` standard deviations above the mean for the given Return on Equity. This is expensive, and indicates that for the given Return on Equity `Large Growth` has a lower Price-to-Book ratio roughly 97.5% of the time. Alternatively, `Small Value` is only `0.3` standard deviations above the mean. This is about fairly priced for the given Return on Equity. 
@@ -87,6 +89,7 @@ print_hi('Tom')
 
 Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
 
+[Vanguard]: https://investor.vanguard.com/
 [FRED]: https://fred.stlouisfed.org/
 [jekyll-docs]: https://jekyllrb.com/docs/home
 [jekyll-gh]:   https://github.com/jekyll/jekyll
