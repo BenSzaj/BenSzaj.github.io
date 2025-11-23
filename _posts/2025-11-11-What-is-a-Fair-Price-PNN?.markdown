@@ -50,6 +50,8 @@ Where available, I have tabulated the above data collected on a daily basis for 
 
 ![Feature Importance]({{ site.url }}/Figures/BayesByBackProp/FeatureImportance.png)
 
+![MLP]({{ site.url }}/Figures/BayesByBackProp/ROEPMLP.txt.png)
+
 ![Loss Curves]({{ site.url }}/Figures/BayesByBackProp/LossCurvesExample.png)
 
 ![Parity Plot]({{ site.url }}/Figures/BayesByBackProp/ParityPlot.png)
