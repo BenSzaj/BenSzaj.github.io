@@ -58,7 +58,7 @@ Where available, I have tabulated the above data collected on a daily basis for 
 
 ![Predictions Data]({{ site.url }}/Figures/BayesByBackProp/Predictions_Data.png)
 
-Given the above analysis, where does this leave us at the time of this writing? Below I show the same standard scaled Return on Equity versus Price-to-Book, however, only showing data obtained from the [Vanguard][Vanguard] `Portfolio Composition` as of this writing as well as the distribution of predicted Price-to-Book as a function of Return on Equity.
+Given the above analysis, where does this leave us at the time of this writing? Below I show the same standard scaled Return on Equity versus Price-to-Book, however, only showing data obtained from the [Vanguard][Vanguard] `Portfolio Composition` as of this writing as well as the distribution of predicted Price-to-Book as a function of Return on Equity. Data points above the red line are more expensive than history given the Return on Equity, while data points below the red line, of which there are none, would be cheaper than history given the Returnon Equity. As one might expected, while the `Large Growth` fund has the highest Price-to-Book, it also has the highest Return on Equity, so the high price is somewhat, although, not completely justified.
 
 ![Predictions Results Vanguard]({{ site.url }}/Figures/BayesByBackProp/Predictions_Results_Vanguard.png)
 
