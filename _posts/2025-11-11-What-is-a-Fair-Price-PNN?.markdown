@@ -68,7 +68,7 @@ As an alternative, the estimations shown in the above plot can be quantified in 
 
 Summary:
 
-* I have conducted a preliminary investigation of the `Price-to-Book' value of mutual funds versus various other mutual fund characteristics and macroeconomic variables.
+* I have conducted a preliminary investigation of the `Price-to-Book` value of mutual funds versus various other mutual fund characteristics and macroeconomic variables.
 * A preliminary analysis conducted with `XGBoost` indicates that the `Return on Equity` explains the most variance of the 62 tested `feature` variables.
 * To further elucidate the relationship between `Return on Equity` and `Price-to-Book` I have employed a `probabilsitic neural network` to compute the distribution of `Price-to-Book` given `Return on Equity` which best represents the available historical data.
 * While imperfect, the outcome of this analysis agrees with intuition in that investments with a higher Return on Equity command a higher `Price-to-Book`.
