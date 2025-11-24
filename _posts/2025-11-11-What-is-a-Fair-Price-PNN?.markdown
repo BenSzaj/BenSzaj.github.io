@@ -66,7 +66,14 @@ As an alternative, the estimations shown in the above plot can be quantified in 
 
 ![Predictions BarChart Vanguard]({{ site.url }}/Figures/BayesByBackProp/Predictions_BarChart_Vanguard.png)
 
-Concusions:
+Summary:
+
+* I have conducted a preliminary investigation of the `Price-to-Book' value of mutual funds versus various other mutual fund characteristics and macroeconomic variables.
+* A preliminary analysis conducted with `XGBoost` indicates that the `Return on Equity` explains the most variance of the 62 tested `feature` variables.
+* To further elucidate the relationship between `Return on Equity` and `Price-to-Book` I have employed a `probabilsitic neural network` to compute the distribution of `Price-to-Book` given `Return on Equity` which best represents the available historical data.
+* While imperfect, the outcome of this analysis agrees with intuition in that investments with a higher Return on Equity command a higher `Price-to-Book`.
+* The trained model can subsequently be applied to today's data to gain insight into prices relative to book today as compared to history for a fixed `Return on Equity`.
+* This preliminary analysis suggests that `Large Cap Growth` stocks are historically expensive, being less expensive roughly 97.5% of the time. Similarly, `Small Cap Value` stocks are close to fairly priced, suggesting favorable possible future investment.
 
 
 <!--
