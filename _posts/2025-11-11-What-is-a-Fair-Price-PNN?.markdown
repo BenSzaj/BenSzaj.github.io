@@ -4,6 +4,16 @@ title:  "What is a 'Fair Price' (Part I. Probabilistic Neural Network)?"
 date:   2025-11-11 12:03:37 -0500
 categories: [Probabilistic Neural Network]
 ---
+Summary:
+
+* I have conducted a preliminary investigation of the `Price-to-Book` value of mutual funds versus various other mutual fund characteristics and macroeconomic variables.
+* A preliminary analysis conducted with `XGBoost` indicates that the `Return on Equity` explains the most variance of the 62 tested `feature` variables.
+* To further elucidate the relationship between `Return on Equity` and `Price-to-Book` I have employed a `probabilsitic neural network` to compute the distribution of `Price-to-Book` given `Return on Equity` which best represents the available historical data.
+* While imperfect, the outcome of this analysis agrees with intuition in that investments with a higher Return on Equity command a higher `Price-to-Book`.
+* The trained model can subsequently be applied to today's data to gain insight into prices relative to book today as compared to history for a fixed `Return on Equity`.
+* This preliminary analysis suggests that `Large Cap Growth` stocks are historically expensive, being less expensive roughly 97.5% of the time. Similarly, `Small Cap Value` stocks are close to fairly priced, suggesting favorable possible future investment.
+
+
 In the world of A.I. fueled growth, stocks are expensive. Various measures such as price-to-earnings ratio, price-to-book ratio, and the Cyclically adjusted price-to-earnings ratio (CAPE) are all approaching Dot-com levels of the late 90's. Examples of high price-to-earnings and price-to-book ratios for the total US stock market can be seen in the `Portfolio Composition` tab found on Vanguard and shown below. Despite these high valuations, the stock bulls claim that high prices are justified by higher expected growth of high quality companies, and **`this time is is different`**. Is it really? Are they right? Or otherwise are stocks over-priced and are we in for another lost decade (e.g. 2000 - 2010)?
 
 
@@ -65,16 +75,6 @@ Given the above analysis, where does this leave us at the time of this writing? 
 As an alternative, the estimations shown in the above plot can be quantified in the form of a bar chart. In the chart below, I quantify today's price relative to the estimated fair-value distribution in units of standard deviation above the mean for each fund shown (ticker in parenthesis). As an example, `Large Growth` is `2.2` standard deviations above the mean for the given Return on Equity. This is expensive, and indicates that for the given Return on Equity `Large Growth` has a lower Price-to-Book ratio roughly 97.5% of the time. Alternatively, `Small Value` is only `0.3` standard deviations above the mean. This is about fairly priced for the given Return on Equity. 
 
 ![Predictions BarChart Vanguard]({{ site.url }}/Figures/BayesByBackProp/Predictions_BarChart_Vanguard.png)
-
-Summary:
-
-* I have conducted a preliminary investigation of the `Price-to-Book` value of mutual funds versus various other mutual fund characteristics and macroeconomic variables.
-* A preliminary analysis conducted with `XGBoost` indicates that the `Return on Equity` explains the most variance of the 62 tested `feature` variables.
-* To further elucidate the relationship between `Return on Equity` and `Price-to-Book` I have employed a `probabilsitic neural network` to compute the distribution of `Price-to-Book` given `Return on Equity` which best represents the available historical data.
-* While imperfect, the outcome of this analysis agrees with intuition in that investments with a higher Return on Equity command a higher `Price-to-Book`.
-* The trained model can subsequently be applied to today's data to gain insight into prices relative to book today as compared to history for a fixed `Return on Equity`.
-* This preliminary analysis suggests that `Large Cap Growth` stocks are historically expensive, being less expensive roughly 97.5% of the time. Similarly, `Small Cap Value` stocks are close to fairly priced, suggesting favorable possible future investment.
-
 
 <!--
 #You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
