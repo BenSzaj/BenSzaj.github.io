@@ -18,7 +18,7 @@ In the world of A.I. fueled growth, stocks are expensive. Various measures such 
 
 ![Portfolio Composition]({{ site.url }}/Figures/BayesByBackProp/PortfolioComposition.png)
 
-In the interest of this post, the aim is to use the `Portfolio Composition` data (as shown above) in conjunction with various rates and macroeconomic variables available through the Federal Reserve Bank of St. Louis ([FRED][FRED]) to answer this exact question. More concisely, I would like to estimate a probability distribution for a `Fair Value` for the `P/B ratio` given the 62 variables listed below. I have excluded variables that depend on price of stocks such as dividend yield and price-to-earnings ratio since these would create a data leak with the `target` variable. In addition, I have log scaled `Return on Equity`, and `P/B ratio` and additionally abbreviated earnings growth to `EG5.' 
+In the interest of this post, the aim is to use the `Portfolio Composition` data (as shown above) in conjunction with various rates and macroeconomic variables available through the Federal Reserve Bank of St. Louis ([FRED][FRED]) to answer this exact question. More concisely, I would like to estimate a probability distribution for a `Fair Value` for the `P/B ratio` given the 62 variables listed below. I have excluded variables that depend on price of stocks such as dividend yield and price-to-earnings ratio since these would create a data leak with the `target` variable. In addition, I have log scaled `Return on Equity` (RoE), and `P/B ratio` and additionally abbreviated earnings growth to `EG5.' 
 
 {% highlight ruby %}
 Features = ['Log RoE', 'Daily Fed Funds', '1 - year treasury',
@@ -51,11 +51,13 @@ Features = ['Log RoE', 'Daily Fed Funds', '1 - year treasury',
             'Annualized Hourly Earnings', 'EG5']
 {% endhighlight %}
 
-Where available, I have tabulated the above data collected on a daily basis for ~100 ETF index funds representing most of the Vanguard passive lineup. In total, there are 71395 observations each with 62 features. The temporal distribution of the data is shown below. I partition pre-2025 data into `Training` shown in blue and post-2025 data into `Testing` shown in red, corresponding to a ~71/29 split. Additionally, all data is standard scaled to a zero-mean and unit standard deviation, i.e.
+Where available, I have tabulated the above data collected on a daily basis for ~100 ETF index funds representing most of the Vanguard passive lineup. In total, there are 71395 observations each with 62 features. The temporal distribution of the data is shown below. I partition pre-2025 data into `Training` shown in blue and post-2025 data into `Testing` shown in red, corresponding to a ~71/29 split. Additionally, All data is standard scaled to a zero-mean and unit standard deviation, i.e.
 
 ```Z = \frac{X-\mu}{\sigma}```
  
 ![Histogram Of Data]({{ site.url }}/Figures/BayesByBackProp/HistogramOfData.png)
+
+
 
 ![Feature Importance]({{ site.url }}/Figures/BayesByBackProp/FeatureImportance.png)
 
@@ -63,7 +65,11 @@ Where available, I have tabulated the above data collected on a daily basis for 
 
 ![Loss Curves]({{ site.url }}/Figures/BayesByBackProp/LossCurvesExample.png)
 
+A common initial assessment of a trained model is a parity plot detailing the observed `target` variable versus the models prediction. This type of parity plot is shown in the figure below, with the training data in blue and the testing data in orange. For both data sets the explained variance (`R2`) is about 0.6. Given that the model is built around a single variable (RoE) and is describing financial price data, this result is decent, but obviously not perfect. Also worth noting is that the model presented here is probabilistic, and so point estimates like those shown in this plot are probably not the best metric for comparison. Rather, a Kullback–Leibler divergence analysis would be preferable.
+
 ![Parity Plot]({{ site.url }}/Figures/BayesByBackProp/ParityPlot.png)
+
+After examining the probabilistic multi-layer perceptron analysis and the parity plot, lets compare our continuous prediction of the scaled `Price-to-Book` distribution versus `RoE` against the observed data. In the figure below, the training and testing data sets are shown in blue and orange respectively. The continous prediction is a solid green line with one standard devation highlighted in red, and two in light green. In the low RoE regime the RoE, alone, does not describe the data well and there is what amounts to a point cloud. In the high RoE regime the prediction of the standard deviation is significantly tighter and the data exhibits less of a spread. The model predictions of the standard deviation capture these differences.
 
 ![Predictions Data]({{ site.url }}/Figures/BayesByBackProp/Predictions_Data.png)
 
