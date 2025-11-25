@@ -6,20 +6,19 @@ categories: [Probabilistic Neural Network]
 ---
 Summary:
 
-* I have conducted a preliminary investigation of the `Price-to-Book` value of mutual funds versus various other mutual fund characteristics and macroeconomic variables.
-* A preliminary analysis conducted with `XGBoost` indicates that the `Return on Equity` explains the most variance of the 62 tested `feature` variables.
+* I have conducted a preliminary investigation of the `Price-to-Book` value of index mutual funds versus various other mutual fund characteristics and macroeconomic variables.
+* A preliminary analysis conducted with `XGBoost` indicates that the `Return on Equity` explains the most variance of the `Price-to-Book` data relative to the other 61 tested `Feature` variables.
 * To further elucidate the relationship between `Return on Equity` and `Price-to-Book` I have employed a `probabilsitic neural network` to compute the distribution of `Price-to-Book` given `Return on Equity` which best represents the available historical data.
 * While imperfect, the outcome of this analysis agrees with intuition in that investments with a higher Return on Equity command a higher `Price-to-Book`.
 * The trained model can subsequently be applied to today's data to gain insight into prices relative to book today as compared to history for a fixed `Return on Equity`.
 * This preliminary analysis suggests that `Large Cap Growth` stocks are historically expensive, being less expensive roughly 97.5% of the time. Similarly, `Small Cap Value` stocks are close to fairly priced, suggesting favorable possible future investment.
 
-
-In the world of A.I. fueled growth, stocks are expensive. Various measures such as price-to-earnings ratio, price-to-book ratio, and the Cyclically adjusted price-to-earnings ratio (CAPE) are all approaching Dot-com levels of the late 90's. Examples of high price-to-earnings and price-to-book ratios for the total US stock market can be seen in the `Portfolio Composition` tab found on Vanguard and shown below. Despite these high valuations, the stock bulls claim that high prices are justified by higher expected growth of high quality companies, and **`this time is is different`**. Is it really? Are they right? Or otherwise are stocks over-priced and are we in for another lost decade (e.g. 2000 - 2010)?
+In the world of A.I. fueled growth, stocks are expensive. Various measures such as price-to-earnings ratio, price-to-book ratio, and the Cyclically adjusted price-to-earnings ratio ([CAPE][CAPE]) are all approaching Dot-com levels of the late 90's. Examples of high price-to-earnings and price-to-book ratios for the total US stock market can be found in the `Portfolio Composition` tab found on Vanguard and shown below. Despite these high valuations, stock market bulls claim that high prices are justified by higher anticipated growth of high quality companies, and **`this time is different`**. Is it really? Are they right? Or otherwise are stocks over-priced and are we in for another lost decade (e.g. 2000 - 2010)?
 
 
 ![Portfolio Composition]({{ site.url }}/Figures/BayesByBackProp/PortfolioComposition.png)
 
-In the interest of this blog, the aim is to use the `Portfolio Composition` data (as shown above) in conjunction with various rates and macroeconomic variables available through the Federal Reserve Bank of St. Louis ([FRED][FRED]) to answer this exact question. More concisely, I would like to estimate a probability distribution for a `Fair Value` for the `P/B ratio` given the 62 variables listed below. I have excluded variables that depend on price of stocks such as dividend yield and price-to-earnings ratio since these would create a data leak with the `target` variable. In addition, I have log scaled `Return on Equity`, and `P/B ratio` and additionally abbreviated earnings growth to `EG5.' 
+In the interest of this post, the aim is to use the `Portfolio Composition` data (as shown above) in conjunction with various rates and macroeconomic variables available through the Federal Reserve Bank of St. Louis ([FRED][FRED]) to answer this exact question. More concisely, I would like to estimate a probability distribution for a `Fair Value` for the `P/B ratio` given the 62 variables listed below. I have excluded variables that depend on price of stocks such as dividend yield and price-to-earnings ratio since these would create a data leak with the `target` variable. In addition, I have log scaled `Return on Equity`, and `P/B ratio` and additionally abbreviated earnings growth to `EG5.' 
 
 {% highlight ruby %}
 Features = ['Log RoE', 'Daily Fed Funds', '1 - year treasury',
@@ -98,6 +97,7 @@ As an alternative, the estimations shown in the above plot can be quantified in 
 %Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
 -->
 
+[CAPE]: http://www.econ.yale.edu/~shiller/data.htm
 [Vanguard]: https://investor.vanguard.com/
 [FRED]: https://fred.stlouisfed.org/
 [jekyll-docs]: https://jekyllrb.com/docs/home
