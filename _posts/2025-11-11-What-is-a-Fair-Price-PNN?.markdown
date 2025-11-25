@@ -81,6 +81,8 @@ As an alternative, the estimations shown in the above plot can be quantified in 
 
 ![Predictions BarChart Vanguard]({{ site.url }}/Figures/BayesByBackProp/Predictions_BarChart_Vanguard.png)
 
+In conclusion, I have presented a preliminary analysis of the sensitivity of the `Price-to-Book` to 62 variables describing additional characteristics of mutual funds in addition to macroeconomic state variables. The analysis suggests that the `Return on Equity` is the single most important feature in my data set. Upon applying a probabilistic neural network to the data, mapping RoE to `Price-to-Book`, we have trained a model which reasonably describes the data. The model is less than perfect, and leaves significant room for improvement. Nevertheless, the model can be applied to securities at today's prices to estiamte (i) what fair value should be and (ii) how far away from fair value the prices are today given the return on equity. 
+
 <!--
 #You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
