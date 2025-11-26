@@ -57,7 +57,7 @@ Where available, I have tabulated the above data collected on a daily basis for 
  
 ![Histogram Of Data]({{ site.url }}/Figures/BayesByBackProp/HistogramOfData.png)
 
-
+As a preliminary analysis of the data, we apply [XGBoost][XGBoost] with `SHAP` to obtain estimates of feature importance. The results from this analysis are shown below. While Return on equity and Earnings Growth over the last five years contribute the most to the `Price-to-book` prediction, surprisingly, the other macroeconomic variables contribute a non-negliglbe amount as well. Additional computations with `XGBoost` reveals that the ranking of these additional macroeconomic variables is not precisely determined by `XGBoost`, rather, it is somewhat dependent on initial random seed settings. Given this ambuity, while the macroeconomic variables are important, for the remainder of this post I will focus solely on the Return on Equity since it is the most important and simplifies the analysis (for now).
 
 ![Feature Importance]({{ site.url }}/Figures/BayesByBackProp/FeatureImportance.png)
 
@@ -105,6 +105,7 @@ In conclusion, I have presented a preliminary analysis of the sensitivity of the
 %Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
 -->
 
+[XGBoost]: https://arxiv.org/pdf/1603.02754
 [CAPE]: http://www.econ.yale.edu/~shiller/data.htm
 [Vanguard]: https://investor.vanguard.com/
 [FRED]: https://fred.stlouisfed.org/
